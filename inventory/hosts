@@ -1,0 +1,3 @@
+[workers]
+ansible-one ansible_user=devops ansible_password=***
+ansible-two ansible_user=devops ansible_password=***
