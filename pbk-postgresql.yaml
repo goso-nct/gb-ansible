@@ -1,0 +1,5 @@
+---
+- hosts: grp_db
+  roles:
+    - role: geerlingguy.postgresql
+      become: yes
