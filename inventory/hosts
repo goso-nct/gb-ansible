@@ -1,9 +1,0 @@
-[grp_web]
-tomcat_server_51 ansible_ssh_private_key_file=/home/devops/.ssh/id_rsa
-
-[grp_db]
-postgresql_server_52 ansible_ssh_private_key_file=/home/devops/.ssh/id_rsa
-
-[workers:children]
-grp_web
-grp_db

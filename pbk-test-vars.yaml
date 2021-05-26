@@ -1,0 +1,20 @@
+---
+- name: Messages
+  hosts: all
+  become: yes
+
+  vars:
+    slovo1: DOM
+    slovo2: in
+    mesto: RUS
+    
+  tasks:
+  
+  - name: Print Var
+    debug:
+      var: slovo1
+      
+  - name: Print Msg
+    debug:
+      msg: "Мой дом v {{ mesto }}"
+
