@@ -1,0 +1,20 @@
+---
+- name: install tomcat 9
+  hosts: app
+  become: true
+
+  tasks:
+
+  - name: download
+    get_url:
+      url: https://apache-mirror.rbc.ru/pub/apache/tomcat/tomcat-9/v9.0.46/bin/apache-tomcat-9.0.46.tar.gz
+      dest: /usr/local
+
+  - name: extract tomcat packages
+    unarchive:
+      src: /usr/local/apache-tomcat-9.0.46.tar.gz
+      dest: /usr/local
+      remote_src: yes
+
+  - name: start tomcat services
+    shell: nohup /usr/local/apache-tomcat-9.0.46/bin/startup.sh 
